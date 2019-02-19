@@ -1,0 +1,331 @@
+# Site settings
+baseurl = "https://ccumvllab.github.io/site"
+languageCode = "en-us"
+title = "Machine Vision and Learning Lab"
+theme = "mvl-agency"
+publishDir = "docs"
+
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
+
+[params]
+  # You can use Markdown syntax for urls [text](//url.to/source)  or
+  # most longer texts.
+  #
+  # All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
+  # for more icons. The icons are represented by their corresponding
+  # CSS class.
+
+  # To provide some metadata for search engines feel free to add a few
+  # information about you and your website.
+  name = "MVL Lab"
+  description = "National Chung Cheng University, Department of Computer Science and Information Engineering, Machine Vision and Learning Lab"
+  # email = "your@email.com"
+
+  # Link custom assets relative to /static
+  custom_css = []
+  custom_js  = []
+  #favicon    = "favicon.ico"
+
+  # Possibility to disable external/additional fonts
+  # Exception: Fontawesome
+  disableFonts = false
+
+  # 404 error customization
+  [params.error404]
+    heading = "Page couldn't be found"
+    text = "Please visit [this page](/site/)"
+
+  # Optional piwik tracking
+  #[params.analytics.piwik]
+  #  URL = "https://stats.example.com"
+  #  ID = "42"
+  #  # Track all subdomains with "*.example.com"
+  #  domain = "www.example.com"
+  #  # Optional integrity check hash
+  #  hash = "sha512-RfeD0pacGTqy9m7U6PgehQfS4cc7SIt+e+P+H5e848kEvB/RW84CUGO3O4O3LNbxjevym6KPUZ8muPsMrI8WIw=="
+
+  # Navigation
+  [params.navigation]
+    brand = "Machine Vision and Learning Lab"
+    # Optional logo as brand stored in img/
+    #logo = "logo.svg"
+    services = "Services"
+    #portfolio = "Portfolio"
+    about = "Research"
+    team = "Members"
+    contact = "Contact"
+
+    # Add custom links. Those can be pre- and postpended to the default menu above.
+    # Use the weight attribute to order your custom links. Uncomment the example
+    # below and replace the values with your own.
+
+    # prepended links
+    #[[menu.prepend]]
+    #  url = "http://gohugo.io"
+    #  name = "Hugo"
+    #  weight = 10
+
+    # postpended links
+    #[[menu.postpend]]
+    #  url = "#"
+    #  name = "Demo"
+    #  weight = 10
+
+    [[menu.postpend]]
+      url = "https://ccumvllab.github.io/107-MM/"
+      name = "Course"
+      weight = 9
+  # Hero section
+  [params.hero]
+    # To change the background image of the hero, replace 'header-bg.jpg' in
+    # the 'static/img' folder.
+    title = "Welcome To Machine Vision and Learning Lab"
+    subtitle = "機器視覺與學習實驗室"
+    buttonText = "English Version"
+
+
+  # Services section
+  [params.services]
+    enable = false
+    title = "Services"
+    subtitle = "Lorem ipsum dolor sit amet consectetur."
+
+    [[params.services.row]]
+
+    [[params.services.row.list]]
+      icon = "fa-shopping-cart"
+      title = "E-Commerce"
+      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      url = "#"
+
+    [[params.services.row.list]]
+      icon = "fa-laptop"
+      title = "Responsive Design"
+      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      url = "#"
+
+    [[params.services.row.list]]
+      icon = "fa-lock"
+      title = "Web"
+      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      url = "#"
+
+  # Portfolio section
+  [params.portfolio]
+    enable = false
+    # All projects defined in their own files. You can find example projects
+    # at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
+    # at the root of this Hugo site.
+    # For more informtion take a look at the README.
+    title = "Portfolio"
+    subtitle = "Lorem ipsum dolor sit amet consectetur."
+
+    [params.portfolio.modal]
+      client = "Client"
+      date = "Date"
+      category = "Category"
+      buttonText = "Close project"
+
+
+    # About section
+  [params.about]
+    enable = true
+    title = "Research"
+    subtitle = "本實驗室近年研究方向與成果"
+    endpoint = "Be part<br>of our<br>story!"
+
+    # The events will be listed from the top to the bottom.
+    # All images are stored under 'static/img/about'.
+    # Replace them with your own.
+
+    [[params.about.events]]
+      img = "deep-learning.jpg"
+      date = "Now"
+      title = "深度學習"
+      description = "是機器學習研究中的一個新的領域，其概念源於類神經網路的研究。在電腦視覺、影像處理等領域都非常有發展潛力。深度學習方法被用來模擬人類大腦的思考方式，模仿人腦的機制來解釋數據，例如圖像，聲音和文本。以圖像為例，通過組合低階的影像特徵，發展出中階的邊緣、形狀等概念，進而學習高階的意涵，像是物件或人臉。"
+
+    [[params.about.events]]
+      img = "makeup-attack.png"
+      date = "2018"
+      title = "將攻擊資訊包含在化妝中對深度學習模型進行攻擊"
+      description = "機器學習的發展非常迅速，在電腦視覺和自然語言處理方面都有很好的成果。有許多深度學習技術被運用在人類日常生活當中例如自動駕駛汽車和人臉辨識系統。如今，人類日常生活漸漸的依賴於深度神經網路可能會導致嚴重的後果，因此神經網路的安全性就變的很重要。因此展現深度神經網路其實有明顯的弱點，我們提出了一種基於生成對抗網絡的方法來生成可以欺騙人臉識別系統的臉部化妝圖片。我們在人類無法察覺的異常化妝照片結果中隱藏了攻擊的擾動信息。實驗結果顯示，我們不但可以生成高畫質的臉部化妝圖像，並且我們的攻擊結果在人臉識別系統中具有很高的攻擊成功率。"
+
+    [[params.about.events]]
+      img = "music-game.png"
+      date = "2018"
+      title = "利用生成對抗網路產生音樂節奏遊戲"
+      description = "音樂節奏遊戲是目前非常熱門的遊戲，我們提出了基於生成對抗網路的方法產生音樂節奏遊戲譜面。音樂被分離為人聲與配樂兩部分，使產生的譜面更貼近真實譜面。 模型包含兩種生成對抗網路的概念：為了加入音樂資訊而採用的Conditional Generative Adversarial Nets (CGANs)以及使模型更好收斂的Improved Wasserstein GAN (WGAN-GP)。"
+
+   [[params.about.events]]
+      img = "scribble-lines-to-painting.jpg"
+      date = "2017"
+      title = "Be an Artist! Scribble Lines to Painting."
+      description = "我們提出一個全自動化的系統，可以將隨意畫的塗鴉轉化成一幅畫作。然而這是一個嚴峻的挑戰，原因在於輸入的塗鴉可能是非常雜亂並且隱藏著多重物件的， 因此找到這些重複的線條與多重的物件之間的關聯性並不是件簡單的事。在系統當中，我們結合使用了 selective search、sparse coding 與 Convolutional neural network (CNN)， 其中我們運用 selective search 來找尋塗鴉當中可能是物件的部分；接著利用 sparse coding 來找到相對應的元素；最後藉由 CNN 套上欲轉換的風格。最終的實驗結果顯示我們所使用的方法有優越的性能並且產生具有藝術性的作品。"
+
+    [[params.about.events]]
+      img = "action-recognition-with-sensor-data.jpg"
+      date = "2016"
+      title = "基於深度學習之感測資料動作辨識"
+      description = "隨著近年來穿戴式裝置的盛行，透過它所收集的感測來做動作辨識的應用也越趨的重要。而電腦視覺領域中，人體動作辨識也越來越顯得重要，在動作辨識中，也開始大量使用多軸穿戴裝置收集的感測資料來進行動作辨識。深度學習被視為機器學習中，最有潛力解決許多電腦視覺問題的方法。卷積神經網絡 (convolutional neural network, CNN) 是深度學習中最受關注的方法之一。我們提出了 MP-CNN 的架構，此架構包含了 D-CNN 和 S-CNN 兩個新的組件來對感測資料進行動作辨識，在 D-CNN 中，我們於訓練階段利用 GMM 來得到每個動作的分布，之後再經由 GMR 和 GMMs 來對輸入的訊號資料分區以及通道校準，並將每個輸入資訊映對到相對應的 CNN 通道。因此，我們也提出一個基於 LZW 的 S-CNN 架構，使用 CNN 來建構出狀態間，輸入資訊和轉移概率的關係，來自動轉換感測資料到狀態轉移概率。最後再將 D-CNN 和 S-CNN 結合成 MP-CNN 來提升整體架構的效能。"
+
+    [[params.about.events]]
+      img = "clothes-style-analysis.jpg"
+      date = "2016"
+      title = "衣著樣式分析與流行元素擷取"
+      description = "隨著衣服和配飾樣式越來越多，無論實體或網路店家，消費者要在眾多樣式中找尋自己喜好的樣式將花費大量的時間，因此若消費者能給一些喜歡的服飾照片，系統分析照片中服飾找出相關資訊（如店家地址、搭配相關配飾等）。對店家而言，若能收集到顧客相關服裝風格就可以根據這份資訊調整進貨款式和店裡的擺設，進一步根據消費者的喜好推薦相關配飾給消費者並節省消費者去尋找能搭配相關配飾時間。對成衣商而言，能透過各個店家收集的資料加以分析就能知道那些款式受歡迎那些款式不受歡迎，進而成為下一批新款式的設計參考。"
+
+    [[params.about.events]]
+      img = "hoi-for-medical-rehabilitation.png"
+      date = "2016-2018"
+      title = "基於復健醫療的人與物件互動辨識深度學習方法"
+      description = "現今社會逐步邁向高齡化後，銀髮族的健康照護是大家都很重視的議題。我們計畫著眼於銀髮族的復健運動與娛樂，希望藉由分析人與物件的互動行為，進一步分析銀髮族使用復健道具或運動器具的運動情形。第一是衡量操作的正確性，期望確切達到復健運動的目的與功能。分析使用復健運動器材的方式，系統有機會提出警示或提供正確姿勢的語音提示，達到復健運動的期望功效；第二是藉由分析的結果提供使用者回饋，如得分高低、任務達成或語音鼓勵，將復健運動轉換成娛樂性較高的方式，增添銀髮族從事復健運動的趣味性，延長使用者復健活動的時間，進一步激勵患者正確並樂於使用復健設施。"
+
+    [[params.about.events]]
+      img = "outdoor-low-resolution-face-recognition.png"
+      date = "2016"
+      title = "戶外低解析人臉辨識"
+      description = "此計畫目標是對於低解析度的人臉影像進行比對，驗證是否為同一人。現今在未受限制的環境中，人臉辨識的效能常會因為姿勢的因素而下降，所以我們建立一個姿勢正規化的方法來復原任意的臉部角度，藉此回復任意狀態的臉部角度以增加人臉辨識的效能。而此計畫使用了兩種 Caffe 之模型架構: Matching-Convolutional NeuralNetwork (M-CNN)、Siamese Neural Network (SNN)。最後經實驗結果得到 SNN 模型準確率達 90% 以上，與 M-CNN 相較之下較高。"
+
+    [[params.about.events]]
+      img = "image-multi-label-classification.jpg"
+      date = "2015"
+      title = "多重屬性影像分類"
+      description = "進行人臉圖片分類時，欲辨識的圖片中難免會有一些配件，如：太陽眼鏡、圍巾、耳環等，或是外在環境因素，如：光線、角度等， 這些配件或是環境因素在人臉圖片中稱之為多重屬性。本實驗室利用既有的 Local Discriminant Embedding (LDE) 演算法作為延伸，達到多重屬性分類的目的。"
+
+    [[params.about.events]]
+      img = "sparse-coding.jpg"
+      date = "~2015"
+      title = "稀疏編碼 Sparse Coding"
+      description = "近年來 sparse coding 在電腦視覺以及影像處理的領域相當受到歡迎，sparse coding 由輸入資料、dictionary 以及輸入資料對應的線性組合組成。sparse coding 可以用來影像除噪 (denoising)、影像復原 (restoration)，以及影像分類 (classification) 等工作。本實驗室基於稀疏編碼著重於二個研究方向：多重屬性影像分類以及巨量資料的稀疏編碼。"
+
+    [[params.about.events]]
+      img = "big-data-sparse-coding.jpg"
+      date = "~2015"
+      title = "巨量資料的稀疏編碼"
+      description = "隨著巨量資料的 dataset 出現，如: ImageNet，設計一個能夠處理大量資料並可以有效分類的分類器是電腦視覺領域的一個重大議題。而 sparse coding 的表現仰賴於 dictionary 的質量，若能習得較好的 dictionary，sparse coding 的表現自然就好。本實驗室針對巨量資料的研究方向為巨量資料的稀疏編碼表示法以及巨量資料的稀疏編碼字典學習。"
+
+  # Team section
+  [params.team]
+    enable = true
+    # Possibility to center items
+    #center = true
+    title = "Lab Team Members"
+    subtitle = "Welcome to join us!"
+    #description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
+
+    # All team member's pictures are stored under 'static/img/team'.
+    # Replace them with your own too.
+    # Suggestion: Image size should be at least 360px*360px or the alignment might be affected.
+    [[params.team.members]]
+      img = "Chen.Kuo.Chiang.jpg"
+      name = "江振國 (Chiang, Chen-Kuo)"
+      position = "Assistant Professor"
+      scope = [
+        "Ph.D., National Tsing Hua University, Taiwan",
+        "Office: 創新大樓305",
+        "Email: ckchiang_AT_cs.ccu.edu.tw",
+        "Home: http://www.cs.ccu.edu.tw/~ckchiang/"
+      ]
+
+    [[params.team.members]]
+      img = "Zhen-An.jpg"
+      name = "朱政安 (Zhu, Zhen-An)"
+      position = "Ph.D Student"
+
+    [[params.team.members]]
+      img = "Hao-Ting.jpg"
+      name = "李皓庭 (Li, Hao-Ting)"
+      position = "Ph.D Student"
+      social = [
+        ["fa-github", "https://github.com/remorsecs"]
+      ]
+
+    [[params.team.members]]
+      img = "Chan-Shih.jpg"
+      name = "胡展碩 (Hu, Chan-Shuo)"
+      position = "Master Student"
+
+    [[params.team.members]]
+      img = "Zi-Ting.jpg"
+      name = "黃子庭 (Huang, Zi-Ting)"
+      position = "Master Student"
+
+    [[params.team.members]]
+      img = "Wen-Hsiu.jpg"
+      name = "楊文綉 (Yang, Wen-Hsiu)"
+      position = "Master Student"
+
+    [[params.team.members]]
+      img = "Chu-En.jpg"
+      name = "陳主恩 (Chen, Chu-En)"
+      position = "Master Student"
+
+    [[params.team.members]]
+      img = "Jheng-Jhang.png"
+      name = "沈政璋 (Shen, Jheng-Jhang)"
+      position = "Master Student"
+
+
+
+  # Client section
+    [params.clients_list]
+      enable = false
+      # Possibility to center items
+      #center = true
+      # Optional client title specifying the involvement
+      #title = "Used and trusted by"
+
+      # All the clients' logos are stored under 'static/img/logos'.
+      # Replace them with your clients's logos.
+      # Suggestion: .svg in the size of 280px*80px looks good
+      [[params.clients]]
+        logo = "envato.jpg"
+        link = "#"
+
+      [[params.clients]]
+        logo = "designmodo.jpg"
+        link = "#"
+
+      [[params.clients]]
+        logo = "themeforest.jpg"
+        link = "#"
+
+      [[params.clients]]
+        logo = "creative-market.jpg"
+        link = "#"
+
+  # Contact section
+  [params.contact]
+    enable = false
+    title = "Contact us"
+    subtitle  = "Lorem ipsum dolor sit amet consectetur."
+
+
+  # Footer section
+  [params.footer]
+    enable = true
+    copyright = "Copyright &copy; 2018 CCU MVL Lab. All right reserved. Generated with Hugo and Agency theme."
+
+#    [[params.footer.social]]
+#      icon = "fa-twitter"
+#      link = "#"
+#      title = "Twitter"
+#
+#    [[params.footer.social]]
+#      icon = "fa-facebook"
+#      link = "#"
+#      title = "Facebook"
+#
+#    [[params.footer.social]]
+#      icon = "fa-linkedin"
+#      link = "#"
+#      title = "LinkedIn"
+#
+#    [[params.footer.quicklinks]]
+#      text = "Privacy Policy"
+#      link = "#"
+#
+#    [[params.footer.quicklinks]]
+#      text = "Terms of Use"
+#      link = "#"
